@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> SignUp </title>
+        <style media="screen">
+            .register{
+                margin: 0 20%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="register">
+            <form method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit">Register</button>
+            </form>
+            <a href="{% url 'login' %}">Login</a>
+        </div>
+    </body>
+
+</html>
